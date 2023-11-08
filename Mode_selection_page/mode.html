@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width={
-    
-  }, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="mode.css">
 </head>
@@ -12,13 +10,40 @@
 
   <div class="maindiv">
    <div class="heading">
-    <h1>Select your Mode</h1>
+    <h1><b>Select your Mode</b></h1>
     <img class="modeimg" src="https://cdn-icons-png.flaticon.com/512/1476/1476223.png" alt="">
    </div>
 <div class="buttons">
-  <button class="easy"> Easy</button>
-  <button class="hard"> Hard</button>
+  <button onclick="easyMode()" class="easy"> Easy</button>
+  <button onclick="hardMode()" class="hard"> Hard</button>
 </div>
   </div>
+
+
+        <!--  our actual game area -->
+  <div id="gameArea">
+    <div id="newGameButton">
+      <button id="newGameButtons" onclick="newGameBegin()"
+      >Restart</button>
+    </div>
+    <section>
+      <h3 id="textOutput">Your Guess</h3>
+      <input type="number" id="inputBox" min="1" max="100" placeholder="Enter your Number" onchange="compareGuess()">
+    </section>
+    <div class="stats">
+      <div class="info">
+        <p>No.of previous attempts: <span id="attempts">0</span>
+        </p>
+      </div>
+      <div class="stats">
+        <p>No.of previous Guesses :<span id="guesses">0</span></p>
+        
+      </div>
+    </div>
+    <!-- <button class="homeBtn">Home </button> -->
+  <p class="clue_txt"> <span class="clue_text_span"></span></p>
+  <p class="score1"></p>
+  </div>
+  <script src="mode.js"></script>
 </body>
 </html>

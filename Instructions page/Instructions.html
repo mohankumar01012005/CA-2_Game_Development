@@ -21,7 +21,7 @@
   <div class="content">
     <div class="first_line">
       <img class="no1photo" src="no.1-removebg-preview.png" alt="">
-      <p>The playe have to select a Mode  between Hard and Easy modes</p>
+      <p class="the">The playe have to select a Mode  between Hard and Easy modes</p>
     </div>
     <div class="second_line">
       <img class="no1photo" src="no.2-removebg-preview.png" alt="">
@@ -39,8 +39,19 @@
   </div>
 <div class="second_row_pics">
   <img class="three" src="three.jpg" alt="">
-  <button class="continue_btn">Contine</button>
+  <button class="continue_btn">Continue</button>
   <img class="eight" src="eight.jpg" alt="">
 </div>
+<script>
+  var continuebtn = document.querySelector(".continue_btn");
+  continuebtn.addEventListener("click", function() {
+    window.location.href = "./../Mode_selection_page/mode.html";
+  });
+
+
+
+  var audio = new Audio('./quick-mechanical-keyboard-14391.mp3')
+  audio.play();
+</script>
 </body>
 </html>

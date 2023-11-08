@@ -8,13 +8,23 @@
 </head>
 <body>
   <div class="logo">
-    <!-- <h1>NUMBER NEXUS THE ULTIMATE GUESSING GAME</h1> -->
-    <!-- <img class="tittleimg" src="game.tittle-removebg-preview.png " alt=""> -->
+   <div class="first_box">
+    <img class="theme_image" src="theme.png" alt="">
+   </div>
+   
+   
+    <div class="second_box">
     <img class="logoimg" src="game logo image.jpg" alt="">
     <button class="startbtn">START</button>
+   </div>
   </div>
 
-
+<script>
+  var startbtn = document.querySelector(".startbtn");
+  startbtn.addEventListener("click", function() {
+    window.location.href = "./../Instructions page/Instructions.html";
+  });
+</script>
 
 </body>
 </html>
